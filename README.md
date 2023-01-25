@@ -7,11 +7,11 @@ Linear regression approach to build a model that predicts daily price change for
 ### Comments on results:
 - #### linear model with no basis expansion:
   - Model appears to capture the underlying data generating function (if it exists) that maps input technical indicator values to following day price change.
-  - This model generalises well to the randomised test set of days between 2000 and 2020. Additionally, the model outperforms the benchmark between 2020 and 2023 on unseen data (see figure _linear_model.py_).
+  - This model generalises well to the randomised test set of days between 2000 and 2020. Additionally, the model outperforms the benchmark between 2020 and 2023 on unseen data (see figure _linear_model_vs_benchmark.png_).
   - Interestingly between 2020 and 2023 even though the model outperforms the benchmark (24% vs 7%), buying and holding S&P500 for this duration (without daily trades) yields the best result (26%). This suggests a large portion of market returns are accumulated overnight during market close.
 - #### linear model with basis expansion {x}->{x,x^2}:
   - Model is too complex, it captures the noise in the training data set leading to poor generalisation despite great performance on training set.
-  - This model overfits, as evidenced by a much better performance on the training set than test set. Additionally, the model does not outperform the benchmark between 2020 and 2023 on unseen data (see figure _linear_model_basis_expansion.py_), further adding evidence to the likelihood of overfitting.
+  - This model overfits, as evidenced by a much better performance on the training set than test set. Additionally, the model does not outperform the benchmark between 2020 and 2023 on unseen data (see figure _basis_expansion_vs_benchmark.png_), further adding evidence to the likelihood of overfitting.
 
 ### Conclusions
 Daily price change prediction for S&P500 index appears to be successfully modelled (compared with benchmark returns) using linear regression approach (without basis expansion) with selected technical indicators as input parameters. However, more in depth statistical analysis needs to be done on the results to deliver the probability of the correctness of the model (using the PAC framework for learning in formal Learning Theory). There exists uncertainty as to whether the linear model without basis expansion will continue to perform well on unseen data.
