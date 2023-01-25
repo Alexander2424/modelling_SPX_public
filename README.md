@@ -1,6 +1,6 @@
 # Modelling S&P500
 _January 2023_
-#### Note: _Code for this repository is currently private as I may use it for an upcoming academic project. I can share full code repository with any potential future employer_
+#### Note: _Code for this repository is currently private as I may use it for an upcoming academic project. I can share full code repository with any potential future employer._
 
 Linear regression approach to build a model that predicts daily price change for S&P500 index using technical indicators (e.g., RSI, ADX, MACD). Results compared against benchmark returns for buying daily at market open and selling at market close. Training and test datasets contain a random selection of days between 2000 and 2020 with an 80/20 split. Results are again visualised on unseen dataset (2020-2023) to compare with benchmark.
 
